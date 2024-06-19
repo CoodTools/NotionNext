@@ -206,4 +206,10 @@ const nextConfig = {
   }
 }
 
+// 添加 staticPageGenerationTimeout 配置
+nextConfig.experimental = {
+  ...nextConfig.experimental, // 如果已有其他实验性配置，保留它们
+  staticPageGenerationTimeout: 500, // 设置静态页面生成的超时时间为300秒
+};
+
 module.exports = withBundleAnalyzer(nextConfig)
